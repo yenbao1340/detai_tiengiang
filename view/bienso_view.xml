@@ -18,7 +18,7 @@
 	            </field>
 	        </record>
 	        
-		<!-- Form -->
+		<!-- Form 123-->
 			<record id="view_ytdp_bienso_form" model="ir.ui.view">
 	            <field name="name">ytdp.bienso.form</field>
 	            <field name="model">ytdp.bienso</field>
