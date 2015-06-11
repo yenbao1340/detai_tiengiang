@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+		<!-- Biến số -->
+		<!-- Tree -->
+	 		<record id="view_ytdp_giatribienso_tree" model="ir.ui.view">
+	            <field name="name">ytdp.giatribienso.tree</field>
+	            <field name="model">ytdp.giatribienso</field>
+	            <field name="arch" type="xml">
+	                <tree string="Giá trị biến số">
+	                	<field name="bienso_id"/>
+	                	<field name="giatri"/>
+	                	<field name="thoigian"/>
+	                	<field name="diemdo"/>
+	                </tree>
+	            </field>
+	        </record>
+	        
+		<!-- Form -->
+			<record id="view_ytdp_giatribienso_form" model="ir.ui.view">
+	            <field name="name">ytdp.giatribienso.form</field>
+	            <field name="model">ytdp.giatribienso</field>
+	            <field name="arch" type="xml">
+	            	<form string="Giá trị biến số">
+	            		<header>
+	                	</header>
+	                	<sheet>
+	                        
+		                    <group>
+		                        <group>
+		                        	<field name="bienso_id"/>
+		                        	<field name="giatri"/>
+		                        </group>
+		                        <group>
+		                        	<field name="thoigian"/>
+	                				<field name="diemdo"/>
+		                        </group>
+		                    </group>
+	                    </sheet>
+	            	</form>
+	            </field>
+	        </record>
+	        
+	        <!-- Action -->
+			<record id="action_ytdp_giatribienso" model="ir.actions.act_window">
+	            <field name="name">Giá trị biến số</field>
+	            <field name="type">ir.actions.act_window</field>
+	            <field name="res_model">ytdp.giatribienso</field>
+	            <field name="view_type">form</field>
+	            <field name="view_mode">tree,form</field>
+	            <field name="view_id" ref="view_ytdp_giatribienso_tree"/>
+	        </record>
+        
+	</data>  
+</openerp>

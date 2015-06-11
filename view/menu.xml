@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+		
+		<!-- Menu YTDP -->
+		<menuitem name="Y Tế Dự Phòng" 
+	        id="menu_ytdp"
+	        sequence="1"/>
+	        
+			<menuitem name="Thông số chương trình" 
+		        id="menu_ytdp_thongsochuongtrinh"
+		        parent="menu_ytdp"
+		        sequence="2"/>
+		        
+	          		<menuitem action="action_ytdp_bienso" 
+		          		id="menu_action_ytdp_bienso" 
+		          		parent="menu_ytdp_thongsochuongtrinh" sequence="3"/>
+		          		
+		          	<menuitem action="action_ytdp_diaphuong" 
+		          		id="menu_action_ytdp_diaphuong" 
+		          		parent="menu_ytdp_thongsochuongtrinh" sequence="4"/>
+
+		          	<menuitem action="action_ytdp_mohinh" 
+		          		id="menu_action_ytdp_mohinh"
+		          		parent="menu_ytdp_thongsochuongtrinh" sequence="5"/>
+		          		
+		          	<menuitem action="action_ytdp_somacchet" 
+		          		id="menu_action_ytdp_somacchet"
+		          		parent="menu_ytdp_thongsochuongtrinh" sequence="6"/>
+		          		
+		          	<menuitem action="action_ytdp_sxhd" 
+		          		id="menu_action_ytdp_sxhd"
+		          		parent="menu_ytdp_thongsochuongtrinh" sequence="7"/>
+		          		
+			<menuitem name="Dữ liệu chương trình" 
+		     	id="menu_ytdp_dulieuchuongtrinh"
+		        parent="menu_ytdp"
+		        sequence="8"/>
+		        
+		        	<menuitem action="action_ytdp_giatribienso" 
+		          		id="menu_action_ytdp_giatribienso"
+		          		parent="menu_ytdp_dulieuchuongtrinh" sequence="9"/>
+    </data>
+</openerp>	
+
+

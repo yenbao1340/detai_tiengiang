@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+ <data>
+        <!-- somacchet -->
+	 		<record id="view_ytdp_somacchet_tree" model="ir.ui.view">
+	            <field name="name">ytdp.somacchet.tree</field>
+	            <field name="model">ytdp.somacchet</field>
+	            <field name="arch" type="xml">
+	                <tree string="Số mắc chết" editable='top'>
+	                	<field name="diaphuong_id"/>
+	                	<field name="thoigian"/>
+	                	<field name="somac"/>
+	                	<field name="sochet"/>
+	                </tree>
+	            </field>
+	        </record>
+			
+			<record id="action_ytdp_somacchet" model="ir.actions.act_window">
+	            <field name="name">Số mắc chết</field>
+	            <field name="type">ir.actions.act_window</field>
+	            <field name="res_model">ytdp.somacchet</field>
+	            <field name="view_type">form</field>
+	            <field name="view_mode">tree,form</field>
+	            <field name="view_id" ref="view_ytdp_somacchet_tree"/>
+	        </record>
+   </data>  
+</openerp>

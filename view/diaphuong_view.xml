@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+ <data>
+		
+		<!-- Dia Phuong -->
+	 		<record id="view_ytdp_diaphuong_tree" model="ir.ui.view">
+	            <field name="name">ytdp.diaphuong.tree</field>
+	            <field name="model">ytdp.diaphuong</field>
+	            <field name="arch" type="xml">
+	                <tree string="Địa phương" editable='top'>
+	                	<field name="name"/>
+	                	<field name="dientich"/>
+	                	<field name="danso"/>
+	                	<field name="capdo"/>
+	                </tree>
+	            </field>
+	        </record>
+			
+			<record id="action_ytdp_diaphuong" model="ir.actions.act_window">
+	            <field name="name">Địa phương</field>
+	            <field name="type">ir.actions.act_window</field>
+	            <field name="res_model">ytdp.diaphuong</field>
+	            <field name="view_type">form</field>
+	            <field name="view_mode">tree,form</field>
+	            <field name="view_id" ref="view_ytdp_diaphuong_tree"/>
+	        </record>
+	        
+   </data>  
+</openerp>

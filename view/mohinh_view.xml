@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+ <data>
+		
+        <!-- Mo Hinh -->
+	 		<record id="view_ytdp_mohinh_tree" model="ir.ui.view">
+	            <field name="name">ytdp.mohinh.tree</field>
+	            <field name="model">ytdp.mohinh</field>
+	            <field name="arch" type="xml">
+	                <tree string="Mô hình">
+	                	<field name="name"/>
+	                	<field name="thoigian"/>
+	                	<field name="giatritiendoanam"/>
+	                	<field name="giatritiendoanduong"/>
+	                	<field name="gioihantren"/>
+	                	<field name="gioihanduoi"/>
+	                </tree>
+	            </field>
+	        </record>
+			
+			<record id="view_ytdp_mohinh_form" model="ir.ui.view">
+	            <field name="name">ytdp.mohinh.form</field>
+	            <field name="model">ytdp.mohinh</field>
+	            <field name="arch" type="xml">
+	            	<form string="Mô hình">
+	            		<header>
+	                	</header>
+	                	<sheet>
+		                    
+	                        <h1><label string="Tên mô hình" for="name"/></h1>
+	                        <h1><field name="name" class="oe_inline"/></h1>
+		                    
+		                    <group>
+		                        <group>
+		                        	<field name="thoigian"/>
+				                	<field name="giatritiendoanam"/>
+				                	<field name="giatritiendoanduong"/>
+		                        </group>
+		                        <group>
+		                        	<field name="log_likelihood"/>
+				                	<field name="gioihantren"/>
+	                				<field name="gioihanduoi"/>
+		                        </group>
+		                    </group>
+		                     <group>
+		                        <group>
+		                        	<field name="giatriROC"/>
+				                	<field name="giatri_p"/>
+		                        </group>
+		                        <group>
+		                        	<field name="saisochuan"/>
+				                	<field name="khoantincay"/>
+	                				<field name="thamso"/>
+		                        </group>
+		                    </group>
+		                    <notebook>
+		                        <page string="Biến số mô hình">
+		                            <field name="giatri_bienso_lines">
+		                            	<tree string="Giá trị biến số" editable='top'>
+						                	<field name="thamso"/>
+						                	<field name="maso_bienso"/>
+						                </tree>
+					                </field>
+	                            </page>
+                            </notebook>
+	                    </sheet>
+	            	</form>
+	            </field>
+	        </record>
+			<record id="action_ytdp_mohinh" model="ir.actions.act_window">
+	            <field name="name">Mô hình</field>
+	            <field name="type">ir.actions.act_window</field>
+	            <field name="res_model">ytdp.mohinh</field>
+	            <field name="view_type">form</field>
+	            <field name="view_mode">tree,form</field>
+	            <field name="view_id" ref="view_ytdp_mohinh_tree"/>
+	        </record>
+   </data>  
+</openerp>
